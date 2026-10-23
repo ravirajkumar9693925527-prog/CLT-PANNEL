@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Free Diamond - Video Portal</title>
+  <title>CLT PANNEL - Video Portal</title>
 
   <style>
     * {
@@ -77,7 +77,7 @@
       width: 100%;
       height: 100%;
       display: block;
-      object-fit: cover;
+      object-fit: contain;
       background: #171717;
     }
 
@@ -85,16 +85,13 @@
       position: absolute;
       inset: 0;
       z-index: 10;
-
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-
       cursor: pointer;
       user-select: none;
       touch-action: manipulation;
-
       background: rgba(0, 0, 0, 0.40);
     }
 
@@ -102,19 +99,13 @@
       width: 82px;
       height: 82px;
       border-radius: 50%;
-
       display: flex;
       align-items: center;
       justify-content: center;
-
       padding-left: 5px;
-
       background: rgba(0, 0, 0, 0.72);
-
       font-size: 38px;
-
       box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
-
       transition: 0.15s ease;
     }
 
@@ -130,24 +121,18 @@
     .play-text {
       margin-top: 15px;
       padding: 8px 18px;
-
       border-radius: 20px;
-
       background: rgba(0, 0, 0, 0.78);
-
       font-size: 13px;
     }
 
     .app-card {
       width: 95%;
       max-width: 520px;
-
       margin: 0 auto 50px;
       padding: 20px;
-
       position: relative;
       z-index: 1;
-
       border-radius: 18px;
 
       background: linear-gradient(
@@ -204,7 +189,6 @@
       width: 80px;
       height: 80px;
       flex-shrink: 0;
-
       border-radius: 14px;
       object-fit: cover;
     }
@@ -223,7 +207,6 @@
     .tag {
       padding: 4px 10px;
       border-radius: 12px;
-
       font-size: 11px;
       font-weight: 600;
     }
@@ -238,32 +221,26 @@
 
     .text h3 {
       margin: 6px 0;
-
       font-size: 20px;
       font-weight: 600;
     }
 
     .text p {
       margin: 4px 0;
-
       color: #bdbdbd;
-
       font-size: 13px;
       line-height: 1.5;
     }
 
     .stars {
       margin-top: 6px;
-
       color: #ffcc00;
-
       font-size: 16px;
       letter-spacing: 1px;
     }
 
     .install-btn {
       width: 100%;
-
       display: block;
 
       margin-top: 20px;
@@ -289,7 +266,6 @@
       text-decoration: none;
 
       cursor: pointer;
-
       transition: 0.3s;
     }
 
@@ -305,7 +281,6 @@
       margin: -25px auto 40px;
 
       color: #888;
-
       font-size: 11px;
       line-height: 1.5;
       text-align: center;
@@ -351,9 +326,8 @@
 <body>
 
   <header>
-    <h1>Free Diamond</h1>
+    <h1>CLT PANNEL</h1>
   </header>
-
 
   <main class="container">
 
@@ -370,13 +344,13 @@
           controls
         >
           <source
-            src="https://videotourl.com/videos/1787381079259-5b57c6a9-e7a2-4571-93f6-b77f6d1b4c69.mp4"
+            src="https://videotourl.com/videos/1787379492013-9a879a4d-4c6c-47be-aa25-a50cc3ec2028.mp4"
             type="video/mp4"
           >
 
           Your browser does not support HTML5 video.
-        </video>
 
+        </video>
 
         <div
           id="playOverlay"
@@ -397,17 +371,15 @@
 
     </section>
 
-
     <section class="app-card">
 
       <div class="app-info">
 
         <img
-          src="https://videotourl.com/images/1787391304049-80a774b1-b784-420c-8e99-99822a3842a5.png"
-          alt="Free Diamond"
+          src="https://videotourl.com/images/1792740268203-940c49f8-6a71-44c6-9c99-fcd42fdde510.png"
+          alt="CLT PANNEL"
           class="app-icon"
         >
-
 
         <div class="text">
 
@@ -423,18 +395,15 @@
 
           </div>
 
-
           <h3>
-            Free Diamond
+            CLT PANNEL
           </h3>
 
-
           <p>
-            FREE DIAMOND
+            CLT PANNEL
             <br>
             APPLICATION
           </p>
-
 
           <div class="stars">
             ★★★★★
@@ -444,10 +413,9 @@
 
       </div>
 
-
       <a
         class="install-btn"
-        href="https://1024terabox.com/s/1WDOeCx0POBTd1lY86PBarA"
+        href="https://terasharelink.com/s/1gJ91acLbweng0rI-VF8rkw"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -456,14 +424,11 @@
 
     </section>
 
-
     <div class="footer-note">
-      This website is an independent project and is not
-      affiliated with or endorsed by Garena.
+      This website is an independent project.
     </div>
 
   </main>
-
 
   <script>
     const video = document.getElementById("mainVideo");
@@ -476,47 +441,49 @@
 
       video.muted = false;
 
-      const request = video.play();
+      const playPromise = video.play();
 
-      if (request !== undefined) {
+      if (playPromise !== undefined) {
 
-        request.then(function() {
-
-          overlay.style.display = "none";
-
-        }).catch(function(error) {
-
-          console.log(
-            "Playback with sound blocked:",
-            error
-          );
-
-          video.muted = true;
-
-          video.play().then(function() {
+        playPromise
+          .then(function() {
 
             overlay.style.display = "none";
 
-          }).catch(function(error2) {
+          })
+          .catch(function(error) {
 
             console.log(
-              "Video playback failed:",
-              error2
+              "Playback with sound blocked:",
+              error
             );
 
-          });
+            video.muted = true;
 
-        });
+            video.play()
+              .then(function() {
+
+                overlay.style.display = "none";
+
+              })
+              .catch(function(error2) {
+
+                console.log(
+                  "Video playback failed:",
+                  error2
+                );
+
+              });
+
+          });
 
       }
 
     });
 
-
     video.addEventListener("play", function() {
       overlay.style.display = "none";
     });
-
 
     video.addEventListener("ended", function() {
       overlay.style.display = "flex";
