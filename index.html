@@ -71,6 +71,7 @@
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     }
 
+    /* Video properly fitted inside container */
     .video-container video {
       position: absolute;
       inset: 0;
@@ -78,20 +79,24 @@
       height: 100%;
       display: block;
       object-fit: contain;
-      background: #171717;
+      object-position: center;
+      background: #000;
     }
 
     .play-overlay {
       position: absolute;
       inset: 0;
       z-index: 10;
+
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+
       cursor: pointer;
       user-select: none;
       touch-action: manipulation;
+
       background: rgba(0, 0, 0, 0.40);
     }
 
@@ -99,12 +104,16 @@
       width: 82px;
       height: 82px;
       border-radius: 50%;
+
       display: flex;
       align-items: center;
       justify-content: center;
+
       padding-left: 5px;
+
       background: rgba(0, 0, 0, 0.72);
       font-size: 38px;
+
       box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
       transition: 0.15s ease;
     }
@@ -185,12 +194,17 @@
       gap: 14px;
     }
 
+    /* Zoomed logo */
     .app-icon {
-      width: 80px;
-      height: 80px;
+      width: 90px;
+      height: 90px;
       flex-shrink: 0;
+
       border-radius: 14px;
       object-fit: cover;
+      object-position: center;
+
+      transform: scale(1.08);
     }
 
     .text {
@@ -297,8 +311,9 @@
       }
 
       .app-icon {
-        width: 64px;
-        height: 64px;
+        width: 72px;
+        height: 72px;
+        transform: scale(1.08);
       }
 
       .text h3 {
@@ -343,8 +358,10 @@
           preload="metadata"
           controls
         >
+
+          <!-- NEW VIDEO LINK -->
           <source
-            src="https://videotourl.com/videos/1787379492013-9a879a4d-4c6c-47be-aa25-a50cc3ec2028.mp4"
+            src="https://videotourl.com/videos/1792742246281-a8e67896-c452-4ad4-a3f4-2589e424249d.mp4"
             type="video/mp4"
           >
 
